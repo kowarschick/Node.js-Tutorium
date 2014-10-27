@@ -2,8 +2,12 @@
   <dictionary name="kowa">
     <words>
       <w>ende</w>
+      <w>enthält</w>
+      <w>heißt</w>
+      <w>musterlösungen</w>
       <w>readline</w>
       <w>servus</w>
+      <w>webstorm</w>
     </words>
   </dictionary>
 </component>
