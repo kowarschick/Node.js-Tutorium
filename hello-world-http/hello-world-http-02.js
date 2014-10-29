@@ -99,8 +99,8 @@ function m_get_user_data(p_request, p_callback)
           { var l_data = v_querystring.parse(l_data_string);
             for (var k in l_data)
             { if (l_data.hasOwnProperty(k))
-              { l_data[k].replace(/</g, '&lt;');
-                l_data[k].replace(/>/g, '&gt;');
+              { l_data[k] = l_data[k].replace(new RegExp('<', 'g'), '&lt;')
+                                     .replace(new RegExp('>', 'g'), '&gt;');
               }
             }
             p_callback(l_data);
