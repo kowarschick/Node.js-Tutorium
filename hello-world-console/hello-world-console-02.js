@@ -3,22 +3,22 @@
 
 "use strict";
 
-var l_readline = require('readline');
-var l_rl       = l_readline.createInterface
+var v_readline = require('readline');
+var v_rl       = v_readline.createInterface
                             ({ input:  process.stdin,
                                output: process.stdout
                             });
 
 console.log('Hallo, Welt!');
 
-l_rl.setPrompt('Name oder "Ende": ');
-l_rl.prompt();
-l_rl.on('line',
+v_rl.setPrompt('Name oder "Ende": ');
+v_rl.prompt();
+v_rl.on('line',
         function(p_input)
         { if (p_input === 'Ende' || p_input === '"Ende"')
-          { l_rl.close(); }
+          { v_rl.close(); }
           console.log('Hallo, ' + p_input + '!');
-          l_rl.prompt();
+          v_rl.prompt();
         }
        )
     .on('close',
