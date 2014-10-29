@@ -139,7 +139,8 @@ function m_template_to_html(p_document, p_data, p_response)
 }
 
 v_http
-  /* Der eigentliche HTTP-Server verarbeitet jede Anfrage au dieselbe Art und Weise:
+  /* Der eigentliche HTTP-Server verarbeitet jede Anfrage auf dieselbe Art und Weise:
+   *
    * 1. Ein geeigneter HTTP-Header wird an den Client geschickt.
    * 2. Die Benutzerdaten werden mittels m_get_user_data aus dem Request-Objekt p_request extrahiert.
    * 3. Sobald das zugehörige Datenobjekt via Callback-Funktion zur Verfügung steht,
