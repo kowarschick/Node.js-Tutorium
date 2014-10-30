@@ -150,11 +150,14 @@ v_http
    */
   .createServer
     ( function(p_request, p_response)
-      { p_response.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
+      { var l_document = v_documents[p_request.url] || v_documents.error;
+        p_response.writeHead(l_document === v_documents.error ? 404 : 200,
+                             {'Content-Type': 'text/html; charset=utf-8'}
+                            );
         m_get_user_data
           (p_request,
            function(p_data)
-           { m_template_to_html(v_documents[p_request.url] || v_documents.error, p_data, p_response);
+           { m_template_to_html(l_document, p_data, p_response);
              p_response.end();
            }
           );
