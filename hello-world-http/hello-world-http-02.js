@@ -91,7 +91,7 @@ function m_get_user_data(p_request, p_callback)
       /* Wenn alle Daten empfangen wurden, werden diese Daten
        * bereinigt (Kleiner- und Größerzeichen werden ersetzt), um
        * Cross-Site-Scripting zu verhindern.
-       * Anschließend werden Sie mittels der Callback-Funktion p_callback
+       * Anschließend werden sie mittels der Callback-Funktion p_callback
        * an den Aufrufer weitergeleitet.
        */
       .on('end',
